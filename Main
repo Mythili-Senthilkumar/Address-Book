@@ -1,0 +1,45 @@
+package MainMenu;
+
+import java.util.Scanner;
+
+import contact.ContactManager;
+
+public class AddressBook 
+{
+	public static void main(String[] args) {
+	ContactManager bk=new ContactManager();
+	Scanner s=new Scanner(System.in);
+	while(true)
+	{
+		System.out.println("------ Address Book ------");
+		System.out.println("1. Add contact");
+		System.out.println("2. Update contact");
+		System.out.println("3. Delete contact");
+		System.out.println("4. Search contact");
+		System.out.println("5. View contact");
+		System.out.println("6. Exit");
+		System.out.println("Enter option: ");
+		int option=s.nextInt();
+		s.nextLine();
+		
+		switch(option)
+		{
+		
+		case 1-> bk.addContact();
+		       
+		case 2-> bk.updateContact();
+		        
+		case 3-> bk.deleteContact();
+		      
+		case 4-> bk.searchContact();
+		      
+		case 5-> bk.viewAll();
+		      
+		case 6-> System.out.println("Exiting....");
+		    
+		    
+		 default->System.out.println("Please enter valid option...");
+		}
+	}
+}
+}
